@@ -1,6 +1,6 @@
  /* Script Info Matikan AdBlock By JWP Entertainment */
 #adBlockInfo {
-    background: black; /* ubah warna background menjadi cyan */
+    background: black; /* ubah warna background menjadi black */
     padding: 0;
     position: fixed;
     bottom: 0;
@@ -59,7 +59,7 @@
     -moz-animation: adBlockInfoWobble .5s;
     -webkit-animation: adBlockInfoWobble .5s;
     -o-animation: adBlockInfoWobble .5s;
-    background: linear-gradient(to bottom, cyan, magenta, green); /* ubah warna background menjadi linear gradient dari cyan ke magenta ke green */
+    background: linear-gradient(to right, magenta, cyan); /* ubah warna background menjadi linear gradient dari cyan ke magenta  */
 }
 
 .adBlockTxt:hover {
