@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdBlocker Detection</title>
+</head>
+<body>
+    <h1>AdBlocker Detection</h1>
+    <script>
+        // Fungsi untuk memeriksa apakah AdBlocker aktif
+        function checkAdBlocker() {
+            const adTest = document.createElement("div");
+            adTest.id = "adTest";
+            adTest.style.position = "fixed";
+            adTest.style.bottom = "0";
+            adTest.style.left = "0";
+            adTest.style.width = "100%";
+            adTest.style.height = "1px";
+            document.body.appendChild(adTest);
+
+            setTimeout(() => {
+                const computedStyle = window.getComputedStyle(adTest);
+                if (computedStyle.getPropertyValue("display") === "none") {
+                    alert("AdBlocker TERDETEKSI! Matikan AdBlocker untuk melihat konten.");
+                } else {
+                    alert("Iklan DIPERBOLEHKAN.");
+                }
+                adTest.remove();
+            }, 2000);
+        }
+
+        // Panggil fungsi saat halaman dimuat
+        window.addEventListener("load", checkAdBlocker);
+    </script>
+</body>
+</html>
