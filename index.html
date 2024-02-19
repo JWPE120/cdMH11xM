@@ -1,37 +1,19 @@
- <!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdBlocker Detection</title>
+    <title>Title of the document</title>
 </head>
 <body>
-    <h1>AdBlocker Detection</h1>
+    <h1>Heading</h1>
+    <p>Paragraf.</p>
+
+    <!-- Kill AdBlock -->
+    <link href='https://codeflareblogspot.github.io/code/KillAdBlock.css' rel='stylesheet'/>
     <script>
-        // Fungsi untuk memeriksa apakah AdBlocker aktif
-        function checkAdBlocker() {
-            const adTest = document.createElement("div");
-            adTest.id = "adTest";
-            adTest.style.position = "fixed";
-            adTest.style.bottom = "0";
-            adTest.style.left = "0";
-            adTest.style.width = "100%";
-            adTest.style.height = "1px";
-            document.body.appendChild(adTest);
-
-            setTimeout(() => {
-                const computedStyle = window.getComputedStyle(adTest);
-                if (computedStyle.getPropertyValue("display") === "none") {
-                    alert("AdBlocker TERDETEKSI! Matikan AdBlocker untuk melihat konten.");
-                } else {
-                    alert("Iklan DIPERBOLEHKAN.");
-                }
-                adTest.remove();
-            }, 2000);
-        }
-
-        // Panggil fungsi saat halaman dimuat
-        window.addEventListener("load", checkAdBlocker);
+        var titleAd = 'AD Blocker Detected';
+        var notifAd = 'Please Support JWP Entertainment with disable your browser <u>AD-Block</u> to continue reading or register this blog into whitelist.<br/><b>Thank You</b>';
     </script>
+    <script src='https://codeflareblogspot.github.io/code/KillAdBlock.js'></script>
+    <!-- Kill AdBlock -->
 </body>
 </html>
